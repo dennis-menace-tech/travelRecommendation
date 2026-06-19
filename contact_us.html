@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <title>Travellers</title>
+      <title>Contact us</title>
       <link rel="stylesheet" href="./travel_recommendation.css">
       <script src="https://kit.fontawesome.com/ce664553ff.js" crossorigin="anonymous"></script>
     </head>
@@ -14,11 +14,6 @@
           <li><a href="./about_us.html" id="about">About Us</a></li>
           <li><a href="./contact_us.html" id="contact">Contact Us</a></li>
         </ul>
-        <ul class="searchbar-items">
-            <li><input type="text" id="keywordInput" placeholder="Search here...">  </li>
-            <li><button id="btnSearch">Search</button></li>
-            <li><button id="btnClear">clear</button></li>
-        </ul>
         </nav>
         <div class="container">
             <div class="social-media">
@@ -29,19 +24,33 @@
                     <li><a href="https://youtube.com"  target="_blank" id="YouTube"><i class="fa-brands fa-square-youtube icon"></i></a></li>
                 </ul>
             </div>
-            <div id="result"></div>
-            <div class="home-page-body">
-                <h2>Explore Dream Destinations</h2>
-                <p>The Travel Reccomendation App helps users explore popular travel Destinations
-                        through an interactive and user-friendly interface. It allows users to search 
-                        for beachs, temples, countries, or specific country names to view related cities
-                        along with images and descriptions. The app dynamically fetches data from a structured
-                        JSON file to display relevant results. It provides a simple and effiecient way to discover
-                        and plan travel destinations.
-                </p>
-                <button class="bookBtn">Book Now</button>
+            <div class="contact-us-page-body">
+                <div>
+                    <h2>CONTACT US</h2>
+                    <p>Get in touch!</p>
+                </div>
+                <form id="contactForm">
+                    <div>
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" onclick="thankyou()">Submit</button>
+                </form>
             </div>
         </div>
+        <script>
+            function thankyou(){
+                alert('Thank you for contacting us!')
+            }
+          </script>
         <script src="./travel_recommendation.js"></script>
     </body>
 </html>

@@ -1,0 +1,172 @@
+body {
+    background-image: url('https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w_800/v1/gvv/prod/bgu3z1axknhiqacbmtgc');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+nav {
+    background-color: #251C43;
+    color: white;
+    padding: 0px 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-items a {
+    margin: 0px 5px;
+}
+
+.navbar-items a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-items a:hover {
+    color: #9D5416;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.searchbar-items {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.searchbar-items input {
+    border: none;
+}
+
+.searchbar-items button {
+    border-radius: 15px;
+    background-color: #9D5416;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.searchbar-items button:hover {
+    background-color: #E9B738;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color:#E9B738;
+    transition:cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.social-media ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.home-page-body,
+.contact-us-page-body,
+.about-us-page-body {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.bookBtn {
+    border-radius: 15px;
+    background-color: #9D5416;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.bookBtn:hover {
+    background-color: #E9B738;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contact-us-page-body,
+.our-team-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%
+}
+
+.our-team-grid {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.our-team-item {
+    max-width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.fa-circle-user {
+    height: 30px;
+    width: 30px;
+}
+
+.our-team-item-name {
+    font-weight: bold;
+}
+
+.our-team-item-job-title {
+    background-color: #E9B738;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.our-team-section h3 {
+    font-size: 1.25em;
+}
+
+#contactForm {
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+}
+
+#contactForm > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
