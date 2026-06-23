@@ -4,12 +4,30 @@ const btnSearch = document.getElementById('btnSearch');
 const resultDiv = document.getElementById('result');
 const body = document.querySelectorAll('.home-page-body')[0];
 
+const timezones = {
+    'Sydney, Australia': 'Australia/Sydney',
+    'Melbourne, Australia': 'Australia/Melbourne',
+    'Tokyo, Japan': 'Asia/Tokyo',
+    'Kyoto, Japan': 'Asia/Tokyo',
+    'Rio de Janeiro, Brazil': 'America/Sao_Paulo',
+    'São Paulo, Brazil': 'America/Sao_Paulo',
+    'Angkor Wat, Cambodia': 'Asia/Phnom_Penh',
+    'Taj Mahal, India': 'Asia/Kolkata',
+    'Bora Bora, French Polynesia': 'Pacific/Tahiti',
+    'Copacabana Beach, Brazil': 'America/Sao_Paulo',
+};
+
 const destinationCard = (destination) => `
     <div class="destination-item" id="destination-item--${destination.id}">
         <div class="destination-item-image"><img src=${destination.imageUrl} /></div>
         <div class="destination-item-title"><h3>${destination.name}</h3></div>
         <div class="destination-item-summary"><p>${destination.description}</p></div>
-    </div>
+        <div class="destination-item-time">
+            <p>Current time in ${destination.name.split(',')[0].trim()}: 
+            ${new Date().toLocaleTimeString('en-US', { timeZone: timezones[destination.name], hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' })}
+            </p>
+        </div>
+    </div> 
 `;
 
 function clearDestinations() {
