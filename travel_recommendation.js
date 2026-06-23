@@ -44,7 +44,7 @@ function searchDestinations() {
                     : destinations;
                 resultDiv.innerHTML = items.map(destinationCard).join('');
             } else {
-                const match = destinations['countries']['cities'].filter(d => d.name === searchTerm);
+                const match = data.countries.filter(d => d.name.toLowerCase() === searchTerm);
                 resultDiv.innerHTML = match?.length > 0
                     ? match.map(destinationCard).join('')
                     : '<h2>No destinations found</h2>';
