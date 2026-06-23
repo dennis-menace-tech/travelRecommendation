@@ -39,14 +39,19 @@ function searchDestinations() {
             const destinations = data[searchTerm];
 
             if (destinations?.length > 0) {
-                const items = searchTerm === 'countries'
-                    ? destinations.cities
-                    : destinations;
-                resultDiv.innerHTML = items.map(destinationCard).join('');
+                if (searchTerm === 'countries') {
+                  resultDiv.innerHTML = '';
+                    destinations.forEach(country => {
+                        resultDiv.innerHTML += country.cities.map(destinationCard).join('');
+                      });
+                } else {
+                  items = destinations;
+                  resultDiv.innerHTML = items.map(destinationCard).join('');
+                }
             } else {
-                const match = data.countries.filter(d => d.name.toLowerCase() === searchTerm);
+                const match = data['countries'].filter(d => d.name.toLowerCase() === pluralize(searchTerm, 1));
                 resultDiv.innerHTML = match?.length > 0
-                    ? match.map(destinationCard).join('')
+                    ? match[0].cities.map(destinationCard).join('')
                     : '<h2>No destinations found</h2>';
             }
         })
