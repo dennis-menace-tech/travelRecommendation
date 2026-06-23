@@ -80,6 +80,10 @@ nav ul {
     transition:cubic-bezier(0.23, 1, 0.320, 1);
 }
 
+.social-media {
+    width: 10%;
+}
+
 .social-media ul {
     list-style-type: none;
     display: flex;
@@ -169,4 +173,28 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+#result {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.destination-item {
+    background-color: white;
+    color: black;
+    width: 25%;
+    padding: 10px;
+}
+
+.destination-item img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/2;
+}
+
+.hidden {
+    display: none !important;
 }
